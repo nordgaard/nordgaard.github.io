@@ -23,6 +23,8 @@ h6 {
 
 .topnav {
     font-size: 14px; 
+    background: url(../img/yen-512.png) no-repeat center center;
+
 }
 
 .lead {
