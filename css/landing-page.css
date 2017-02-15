@@ -181,3 +181,7 @@ height: 100%;
 width: 100%;
 background: blank url(loader.gif) no-repeat scroll center center;
 }
+
+#lightbox {
+    position: fixed;
+}
