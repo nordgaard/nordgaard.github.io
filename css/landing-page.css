@@ -98,12 +98,16 @@ h6 {
 
 .content-section-a {
     padding: 50px 0;
-    background-color: grey;
+    background: #264C00;
+    color: white;
 }
 
 .content-section-b {
+.content-section-b {
     padding: 50px 0;
-    background-color: grey;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: mediumaquamarine;
+}
 }
 
 
