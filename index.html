@@ -73,83 +73,80 @@
                             display: inline-block;
                             width: auto;
                             font-size: 100px;
-</style>
-<div class="intro-message" title="One of my passions is photography, this backgound is a picture of mine from the Oakland Hills!">
-    <h1>Jens Nordgaard</h1>
-    <hr class="intro-divider">
-    <ul class="list-inline intro-social-buttons">
-        <li>
-            <a href="https://github.com/nordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name" target="_blank" >Github</span></a>
-        </li>
-        <li>
-            <a href="https://www.linkedin.com/in/jenordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name" target="_blank">Linkedin</span></a>
-        </li>
-        <li>
-            <a href="mailto:jenordgaard@gmail.com?Subject=Greetings" target="_top">
-<i class="fa fa-google fa-fw"></i> <span class="network-name" target="_blank">Email</span></a>
-        </li>
-    </ul>
-</div>
-</div>
-</div>
-</div>
-<!-- /.container -->
-</div>
+                        </style>
+                        <div class="intro-message" title="One of my passions is photography, this backgound is a picture of mine from the Oakland Hills!">
+                            <h1>Jens Nordgaard</h1>
+                            <hr class="intro-divider">
+                            <ul class="list-inline intro-social-buttons">
+                                <li>
+                                    <a href="https://github.com/nordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name" target="_blank" >Github</span></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/jenordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name" target="_blank">Linkedin</span></a>
+                                </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container -->
+            </div>
 <!-- /.intro-header --
-<!-- Page Content -->
-<a  name="services"></a>
-<div class="content-section-a">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Hello, Employers...</h2>
-                <script>
-                    function positionLightboxImage() {
-                        var top = ($(window).height() - $('#lightbox').height()) /2;
-                        var left = ($(window).width() - $('#lightbox').width()) /2;
-                        $('#lightbox')
-                        .css({
-                            'top': top + $(document).scrollTop();
+    <!-- Page Content -->
+    <a  name="services"></a>
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Hello, Employers...</h2>
+                    <script>
+                        function positionLightboxImage() {
+                            var top = ($(window).height() - $('#lightbox').height()) /2;
+                            var left = ($(window).width() - $('#lightbox').width()) /2;
+                            $('#lightbox')
+                            .css({
+                                'top': top + $(document).scrollTop();
+                            })
+                            .fadeIn();
+                        }
+                        function removeLightbox() {
+                            $('#overlay, #lightbox')
+                            .fadeOut('slow', function() {
+                                $(this).remove();
+                                $('body').css('overflow-y', 'auto');
+                            })
+                        }
+                        $('a.lightbox').click(function(e){
+                            $('body').css('overflow-y', 'hidden');
+                            $('<div id="overlay"></div>')
+                            .css('top', $(docment).scrollTop())
+                            .css('opacity', '0')
+                            .animate({'opacity': '0.5'}, 'slow')
+                            .appendTo('body');
+                            $('<div id="lightbox"></div>')
+                            .hide()
+                            .appendTo('body');
+                            $('img')
+                            .attr('src', $(this).attr('href'))
+                            .load(function(){
+                                positionLightboxImage();
+                            })
+                            .click(function(){
+                                removeLightbox();
+                            })
+                            .appendTo('#lightbox');
+                            return false;
                         })
-                        .fadeIn();
-                    }
-                    function removeLightbox() {
-                        $('#overlay, #lightbox')
-                        .fadeOut('slow', function() {
-                            $(this).remove();
-                            $('body').css('overflow-y', 'auto');
-                        })
-                    }
-                    $('a.lightbox').click(function(e){
-                        $('body').css('overflow-y', 'hidden');
-                        $('<div id="overlay"></div>')
-                        .css('top', $(docment).scrollTop())
-                        .css('opacity', '0')
-                        .animate({'opacity': '0.5'}, 'slow')
-                        .appendTo('body');
-                        $('<div id="lightbox"></div>')
-                        .hide()
-                        .appendTo('body');
-                        $('img')
-                        .attr('src', $(this).attr('href'))
-                        .load(function(){
-                            positionLightboxImage();
-                        })
-                        .click(function(){
-                            removeLightbox();
-                        })
-                        .appendTo('#lightbox');
-                        return false;
-                    })
-                </script>
-                <p class="lead">Click on the image to see my <a target="_blank" href="https://nordgaard.github.io/img/Jens_Nordgaard_Resume_2017.jpg" class="lightbox">Resume</a> </p>
-                <script type="text/javascript">
-                    $(document).ready(function() {
-                      $('.quotes').quovolver();
-                  });
-              </script>
+                    </script>
+                    <p class="lead">Click on the image to see my <a target="_blank" href="https://nordgaard.github.io/img/Jens_Nordgaard_Resume_2017.jpg" class="lightbox">Resume</a> </p>
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                          $('.quotes').quovolver();
+                      });
+                  </script>
 <!--                       <div class="quotes">
                           <blockquote>
                               <p>"...and I'm standing on the corner of Fifth and Vermouth."  </p>
@@ -201,8 +198,8 @@
             </div>
         </div>
         <!-- /.container -->
-    </div
-    <!-- /.content-section-b -->
+        </div
+        <!-- /.content-section-b -->
 <!--         <div class="content-section-a">
             <div class="container">
                 <div class="row">
@@ -235,43 +232,47 @@
                             <li>
                                 <a href="https://www.linkedin.com/in/jenordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name" target="_blank">Linkedin</span></a>
                             </li>
-                        </ul>
+                                <li>
+                                    <a href="mailto:jenordgaard@gmail.com?Subject=Greetings" class="btn btn-default btn-lg" target="_blank">
+                                        <i class="fa fa-google fa-fw"></i> <span class="network-name" target="_blank">Email</span></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+                <!-- /.container -->
             </div>
-            <!-- /.container -->
-        </div>
-        <!-- /.banner -->
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#">Home</a>
-                            </li>
-                            <li class="footer-menu-divider">&sdot;</li>
-                            <li>
-                                <a href="#about">About</a>
-                            </li>
-                            <li class="footer-menu-divider">&sdot;</li>
-                            <li>
-                                <a href="#services">Services</a>
-                            </li>
-                            <li class="footer-menu-divider">&sdot;</li>
-                            <li>
-                                <a href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                        <p class="copyright text-muted small">Copyright &copy; Jens Nordgaard 2017. All Rights Reserved</p>
+            <!-- /.banner -->
+            <!-- Footer -->
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="footer-menu-divider">&sdot;</li>
+                                <li>
+                                    <a href="#about">About</a>
+                                </li>
+                                <li class="footer-menu-divider">&sdot;</li>
+                                <li>
+                                    <a href="#services">Services</a>
+                                </li>
+                                <li class="footer-menu-divider">&sdot;</li>
+                                <li>
+                                    <a href="#contact">Contact</a>
+                                </li>
+                            </ul>
+                            <p class="copyright text-muted small">Copyright &copy; Jens Nordgaard 2017. All Rights Reserved</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-        <!-- jQuery -->
-        <script src="js/jquery.js"></script>
-        <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
-    </body>
-    </html>
+            </footer>
+            <!-- jQuery -->
+            <script src="js/jquery.js"></script>
+            <!-- Bootstrap Core JavaScript -->
+            <script src="js/bootstrap.min.js"></script>
+        </body>
+        </html>
