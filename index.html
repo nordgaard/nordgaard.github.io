@@ -1,28 +1,21 @@
-x<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Jens Nordgaard</title>
-
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet">
-
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -31,11 +24,8 @@ x<!DOCTYPE html>
         <![endif]-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="js/jquery.quovolver.js"></script>
-
     </head>
-
     <body>
-
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
             <div class="container topnav">
@@ -67,16 +57,12 @@ x<!DOCTYPE html>
             </div>
             <!-- /.container -->
         </nav>
-
-
         <!-- Header -->
         <a name="about"></a>
         <div class="intro-header">
             <div class="container">
-
                 <div class="row">
                     <div class="col-lg-12">
-
                         <script type="text/javascript">
                             $( function() {
                                 $( document ).tooltip();
@@ -87,108 +73,79 @@ x<!DOCTYPE html>
                             display: inline-block;
                             width: auto;
                             font-size: 100px;
-/*                        }
-    -webkit-appearance: textfield;
-    background-color: white;
-    -webkit-rtl-ordering: logical;
-    user-select: text;
-    cursor: auto;
-    padding: 1px;
-    border-width: 2px;
-    border-style: inset;
-    border-color: initial;
-    border-image: initial;*/
-
-                        
-                    </style>
-                    <div class="intro-message" title="One of my passions is photography, this backgound is a picture of mine from the Oakland Hills!">
-                        <h1>Jens Nordgaard</h1>
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="https://github.com/nordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name" target="_blank" >Github</span></a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/jenordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name" target="_blank">Linkedin</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.intro-header -->
-
-    <!-- Page Content -->
-
-    <a  name="services"></a>
-    <div class="content-section-a">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Hello, Employers...</h2>
-                    <script>
-                        function positionLightboxImage() {
-                            var top = ($(window).height() - $('#lightbox').height()) /2;
-                            var left = ($(window).width() - $('#lightbox').width()) /2;
-                            $('#lightbox')
-                            .css({
-                                'top': top + $(document).scrollTop();
-                            })
-                            .fadeIn();
-                        }
-
-                        function removeLightbox() {
-                            $('#overlay, #lightbox')
-                            .fadeOut('slow', function() {
-                                $(this).remove();
-                                $('body').css('overflow-y', 'auto');
-                            })
-                        }
-
-
-                        $('a.lightbox').click(function(e){
-
-                            $('body').css('overflow-y', 'hidden');
-
-                            $('<div id="overlay"></div>')
-                            .css('top', $(docment).scrollTop())
-                            .css('opacity', '0')
-                            .animate({'opacity': '0.5'}, 'slow')
-                            .appendTo('body');
-
-                            $('<div id="lightbox"></div>')
-                            .hide()
-                            .appendTo('body');
-
-                            $('img')
-                            .attr('src', $(this).attr('href'))
-                            .load(function(){
-                                positionLightboxImage();
-                            })
-                            .click(function(){
-                                removeLightbox();
-                            })
-                            .appendTo('#lightbox');
-                            return false;
+</style>
+<div class="intro-message" title="One of my passions is photography, this backgound is a picture of mine from the Oakland Hills!">
+    <h1>Jens Nordgaard</h1>
+    <hr class="intro-divider">
+    <ul class="list-inline intro-social-buttons">
+        <li>
+            <a href="https://github.com/nordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name" target="_blank" >Github</span></a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/jenordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name" target="_blank">Linkedin</span></a>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+<!-- /.container -->
+</div>
+<!-- /.intro-header --
+<!-- Page Content -->
+<a  name="services"></a>
+<div class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-6">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Hello, Employers...</h2>
+                <script>
+                    function positionLightboxImage() {
+                        var top = ($(window).height() - $('#lightbox').height()) /2;
+                        var left = ($(window).width() - $('#lightbox').width()) /2;
+                        $('#lightbox')
+                        .css({
+                            'top': top + $(document).scrollTop();
                         })
-                    </script>
-                    <p class="lead">Click on the image to see my <a target="_blank" href="https://nordgaard.github.io/img/Jens_Nordgaard_Resume_2017.jpg" class="lightbox">Resume</a> </p>
-
-
-                    <script type="text/javascript">
-                        $(document).ready(function() {
-                          $('.quotes').quovolver();
-                      });
-                  </script>
-
-
+                        .fadeIn();
+                    }
+                    function removeLightbox() {
+                        $('#overlay, #lightbox')
+                        .fadeOut('slow', function() {
+                            $(this).remove();
+                            $('body').css('overflow-y', 'auto');
+                        })
+                    }
+                    $('a.lightbox').click(function(e){
+                        $('body').css('overflow-y', 'hidden');
+                        $('<div id="overlay"></div>')
+                        .css('top', $(docment).scrollTop())
+                        .css('opacity', '0')
+                        .animate({'opacity': '0.5'}, 'slow')
+                        .appendTo('body');
+                        $('<div id="lightbox"></div>')
+                        .hide()
+                        .appendTo('body');
+                        $('img')
+                        .attr('src', $(this).attr('href'))
+                        .load(function(){
+                            positionLightboxImage();
+                        })
+                        .click(function(){
+                            removeLightbox();
+                        })
+                        .appendTo('#lightbox');
+                        return false;
+                    })
+                </script>
+                <p class="lead">Click on the image to see my <a target="_blank" href="https://nordgaard.github.io/img/Jens_Nordgaard_Resume_2017.jpg" class="lightbox">Resume</a> </p>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                      $('.quotes').quovolver();
+                  });
+              </script>
 <!--                       <div class="quotes">
                           <blockquote>
                               <p>"...and I'm standing on the corner of Fifth and Vermouth."  </p>
@@ -215,25 +172,18 @@ x<!DOCTYPE html>
                               <p>“Always do sober what you said you’d do drunk. That will teach you to keep your mouth shut.”    </p>
                               <p> ~ Ernest Hemingway</p>
                           </blockquote>
-
                       </div> -->
-
                   </div>
                   <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <a target="_blank" href="https://nordgaard.github.io/img/Jens_Nordgaard_Resume_2017.jpg" class="lightbox"><img class="img-responsive rounded" src="img/ability-to-smell-fear-cartoon-sm.png" alt=""></a>
                 </div>
             </div>
-
         </div>
         <!-- /.container -->
-
     </div>
     <!-- /.content-section-a -->
-
     <div class="content-section-b">
-
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
                     <hr class="section-heading-spacer">
@@ -242,21 +192,15 @@ x<!DOCTYPE html>
                     <p class="lead">I have been blogging on WordPress a while now and have played around with developing in the space as well, you can see some of my content through my WordPress page <a target="_blank" href="http://jenordgaard.tech/">here</a></p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-
                     <img class="img-responsive rounded" src="img/blue_wave_of_water-wide.jpg" alt="">
                 </div>
             </div>
-
         </div>
         <!-- /.container -->
-
-    </div>
+    </div
     <!-- /.content-section-b -->
-
 <!--         <div class="content-section-a">
-
             <div class="container">
-
                 <div class="row">
                     <div class="col-lg-5 col-sm-6">
                         <hr class="section-heading-spacer">
@@ -268,18 +212,13 @@ x<!DOCTYPE html>
                         <img class="img-responsive" src="img/phones.png" alt="">
                     </div>
                 </div>
-
             </div>
             <!-- /.container -->
-
         </div> 
         <!-- /.content-section-a -->
-
         <a  name="contact"></a>
         <div class="banner">
-
             <div class="container">
-
                 <div class="row">
                     <div class="col-lg-6">
                         <h2>Connect with Jens!</h2>
@@ -295,13 +234,10 @@ x<!DOCTYPE html>
                         </ul>
                     </div>
                 </div>
-
             </div>
             <!-- /.container -->
-
         </div>
         <!-- /.banner -->
-
         <!-- Footer -->
         <footer>
             <div class="container">
@@ -329,13 +265,9 @@ x<!DOCTYPE html>
                 </div>
             </div>
         </footer>
-
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
-
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
-
     </body>
-
     </html>
