@@ -76,103 +76,105 @@ x<!DOCTYPE html>
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="intro-message">
-<script type="text/javascript">
-$( function() {
-    $( document ).tooltip();
-  } );
-  </script>
-  <style>
-  label {
-    display: inline-block;
-    width: 5em;
-  }
-  </style>
-    <h1 title="One of my passions is photography, this backgound is a picture of mine from the Oakland Hills!">Jens Nordgaard</h1>
-                    <hr class="intro-divider">
-                    <ul class="list-inline intro-social-buttons">
-                        <li>
-                            <a href="https://github.com/nordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name" target="_blank" >Github</span></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/jenordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name" target="_blank">Linkedin</span></a>
-                        </li>
-                    </ul>
+
+                        <script type="text/javascript">
+                            $( function() {
+                                $( document ).tooltip();
+                            } );
+                        </script>
+                        <style>
+                          label {
+                            display: inline-block;
+                            width: auto;
+                            font-size: 100px;
+                        }
+                    </style>
+                    <div class="intro-message" title="One of my passions is photography, this backgound is a picture of mine from the Oakland Hills!">
+                        <h1>Jens Nordgaard</h1>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="https://github.com/nordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name" target="_blank" >Github</span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/jenordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name" target="_blank">Linkedin</span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
         </div>
+        <!-- /.container -->
 
     </div>
-    <!-- /.container -->
+    <!-- /.intro-header -->
 
-</div>
-<!-- /.intro-header -->
+    <!-- Page Content -->
 
-<!-- Page Content -->
+    <a  name="services"></a>
+    <div class="content-section-a">
 
-<a  name="services"></a>
-<div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Hello, Employers...</h2>
+                    <script>
+                        function positionLightboxImage() {
+                            var top = ($(window).height() - $('#lightbox').height()) /2;
+                            var left = ($(window).width() - $('#lightbox').width()) /2;
+                            $('#lightbox')
+                            .css({
+                                'top': top + $(document).scrollTop();
+                            })
+                            .fadeIn();
+                        }
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Hello, Employers...</h2>
-                <script>
-                    function positionLightboxImage() {
-                        var top = ($(window).height() - $('#lightbox').height()) /2;
-                        var left = ($(window).width() - $('#lightbox').width()) /2;
-                        $('#lightbox')
-                        .css({
-                            'top': top + $(document).scrollTop();
+                        function removeLightbox() {
+                            $('#overlay, #lightbox')
+                            .fadeOut('slow', function() {
+                                $(this).remove();
+                                $('body').css('overflow-y', 'auto');
+                            })
+                        }
+
+
+                        $('a.lightbox').click(function(e){
+
+                            $('body').css('overflow-y', 'hidden');
+
+                            $('<div id="overlay"></div>')
+                            .css('top', $(docment).scrollTop())
+                            .css('opacity', '0')
+                            .animate({'opacity': '0.5'}, 'slow')
+                            .appendTo('body');
+
+                            $('<div id="lightbox"></div>')
+                            .hide()
+                            .appendTo('body');
+
+                            $('img')
+                            .attr('src', $(this).attr('href'))
+                            .load(function(){
+                                positionLightboxImage();
+                            })
+                            .click(function(){
+                                removeLightbox();
+                            })
+                            .appendTo('#lightbox');
+                            return false;
                         })
-                        .fadeIn();
-                    }
-
-                    function removeLightbox() {
-                        $('#overlay, #lightbox')
-                        .fadeOut('slow', function() {
-                            $(this).remove();
-                            $('body').css('overflow-y', 'auto');
-                        })
-                    }
+                    </script>
+                    <p class="lead">Click on the image to see my <a target="_blank" href="https://nordgaard.github.io/img/Jens_Nordgaard_Resume_2017.jpg" class="lightbox">Resume</a> </p>
 
 
-                    $('a.lightbox').click(function(e){
-
-                        $('body').css('overflow-y', 'hidden');
-
-                        $('<div id="overlay"></div>')
-                        .css('top', $(docment).scrollTop())
-                        .css('opacity', '0')
-                        .animate({'opacity': '0.5'}, 'slow')
-                        .appendTo('body');
-
-                        $('<div id="lightbox"></div>')
-                        .hide()
-                        .appendTo('body');
-
-                        $('img')
-                        .attr('src', $(this).attr('href'))
-                        .load(function(){
-                            positionLightboxImage();
-                        })
-                        .click(function(){
-                            removeLightbox();
-                        })
-                        .appendTo('#lightbox');
-                        return false;
-                    })
-                </script>
-                <p class="lead">Click on the image to see my <a target="_blank" href="https://nordgaard.github.io/img/Jens_Nordgaard_Resume_2017.jpg" class="lightbox">Resume</a> </p>
-
-
-                <script type="text/javascript">
-                    $(document).ready(function() {
-                      $('.quotes').quovolver();
-                  });
-              </script>
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                          $('.quotes').quovolver();
+                      });
+                  </script>
 
 
 <!--                       <div class="quotes">
