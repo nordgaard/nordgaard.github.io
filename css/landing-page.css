@@ -154,12 +154,20 @@ background: blank url(loader.gif) no-repeat scroll center center;
 #lightbox {
     position: fixed;
 }
-
-        h2 {
+/*
+       * {
+            padding: 0px;
+            margin: 0px;
+            z-index: 0;
+        }
+        img {
+            position: relative;
+        }
+        div {
             position: absolute;
             overflow: hidden;
             border: 8px solid #61260D;
-        }
+        }*/
 
         #box1 {     /* Starry Night */
             height: 100px;
