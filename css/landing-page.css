@@ -154,3 +154,65 @@ background: blank url(loader.gif) no-repeat scroll center center;
 #lightbox {
     position: fixed;
 }
+
+       * {
+            padding: 0px;
+            margin: 0px;
+            z-index: 0;
+        }
+        img {
+            position: relative;
+        }
+        div {
+            position: absolute;
+            overflow: hidden;
+            border: 8px solid #61260D;
+        }
+        #box0 {     /* A Sunday on La Grande Jatte */
+            height: 150px;
+            width: 120px;
+            top: 300px;
+            left: 100px;
+        }
+        #pic0 {
+            left: -15px;
+            top: -15px;
+            height: 337px;
+            width: 500px;
+        }
+        #box1 {     /* Starry Night */
+            height: 100px;
+            width: 400px;
+            top: 150px;
+            left: 100px;
+        }
+        #pic1 {
+            left: -35px;
+            top: -20px;
+            height: 300px;
+            width: 480px;
+        }
+        #box2 {     /* Mona Lisa */
+            height: 150px;
+            width: 100px;
+            top: 190px;
+            left: 50px;
+        }
+        #pic2 {
+            left: -20px;
+            top: -20px;
+            height: 300px;
+            width: 198px;
+        }
+        #box3 {     /* The Scream */
+            height: 200px;
+            width: 160px;
+            top: 60px;
+            left: 200px;
+        }
+        #pic3 {
+            left: -30px;
+            top: -20px;
+            height: 400px;
+            width: 314px;
+        }
