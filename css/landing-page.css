@@ -80,16 +80,20 @@ h6 {
 }
 .content-section-a {
     padding: 50px 0;
-    background: #0F9BDC;
+    background-color: #0F9BDC;
     color: white;
 }
 .content-section-b {
     padding: 50px 0;
     background-color: #254B7C;
+        color: white;
+
 }
 .content-section-c {
     padding: 50px 0;
-    background-color: #254B7C;
+    background-color: #0F9BDC;
+        color: white;
+
 }
 }
 .section-heading {
