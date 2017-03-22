@@ -88,6 +88,11 @@ h6 {
     border-bottom: 1px solid #e7e7e7;
     background-color: #254B7C;
 }
+.content-section-c {
+    padding: 50px 0;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #254B7C;
+}
 }
 .section-heading {
     margin-bottom: 30px;
