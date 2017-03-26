@@ -90,196 +90,111 @@
     </div>
     <!-- End Intro Banner -->
     <!-- Start Content Divs-->
-    <div id="accordian">
-        <div class="content-section-a">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-sm-6">
-                        <hr class="section-heading-spacer">
-                        <div class="clearfix"></div>
-<!--                     <script type="text/javascript">
-                        
-                        var h = 0;
-                        var w = 0;
-                        var left = 0;
-                        var top = 0;
-                        var speed = 300;
-                        
-                        $('div').hover(
-                            function() {
-                                h = $(this).css('height');
-                                w = $(this).css('width');
-                                left = $(this).children().css('left');
-                                top = $(this).children().css('top');
-                                
-                                $(this).stop().css({'zIndex':'5'}).animate({
-                                    height : $(this).children().css('height'),
-                                    width : $(this).children().css('width')
-                                }, speed);
-                                $(this).children().animate({
-                                    left : '0',
-                                    top : '0'
-                                }, speed);
-                            },
-                            function() {
-                                $(this).stop().css({'zIndex':'0'}).animate({
-                                    height : h,
-                                    width : w
-                                }, speed);
-                                $(this).children().animate({
-                                    left : left,
-                                    top : top
-                                }, speed);
-                            }
-                            );
-                        </script> -->
-                        <h2 class="section-heading" id="box1">Hello, Employers...</h2>
-                        <script>
-                            function positionLightboxImage() {
-                                var top = ($(window).height() - $('#lightbox').height()) /2;
-                                var left = ($(window).width() - $('#lightbox').width()) /2;
-                                $('#lightbox')
-                                .css({
-                                    'top': top + $(document).scrollTop()
-                                })
-                                .fadeIn();
-                            }
-                            function removeLightbox() {
-                                $('#overlay, #lightbox')
-                                .fadeOut('slow', function() {
-                                    $(this).remove();
-                                    $('body').css('overflow-y', 'auto');
-                                })
-                            }
-                            $('a.lightbox').click(function(e){
-                                $('body').css('overflow-y', 'hidden');
-                                $('<div id="overlay"></div>')
-                                .css('top', $(docment).scrollTop())
-                                .css('opacity', '0')
-                                .animate({'opacity': '0.5'}, 'slow')
-                                .appendTo('body');
-                                $('<div id="lightbox"></div>')
-                                .hide()
-                                .appendTo('body');
-                                $('img')
-                                .attr('src', $(this).attr('href'))
-                                .load(function(){
-                                    positionLightboxImage();
-                                })
-                                .click(function(){
-                                    removeLightbox();
-                                })
-                                .appendTo('#lightbox');
-                                return false;
-                            })
-                        </script>
-                        <p class="lead">Click on the image to see my <a target="_blank" href="https://nordgaard.github.io/img/Jens_Nordgaard_Resume_2017.jpg" class="lightbox">Resume</a> </p>
-                        
-                    </div>
-                    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                        <a target="_blank" href="https://nordgaard.github.io/img/Jens_Nordgaard_Resume_2017.jpg" class="lightbox"><img class="img-responsive rounded" src="img/ability-to-smell-fear-cartoon-sm.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.container -->
-        </div>
-        <div class="content-section-b">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                        <hr class="section-heading-spacer">
-                        <div class="clearfix"></div>
-                        <h2 class="section-heading">Check out my WordPress!</h2>
-                        <p class="lead">I have been blogging on WordPress a while now and have played around with developing in the space as well, you can see some of my content through my WordPress page <a target="_blank" href="http://jenordgaard.tech/">here</a></p>
-                    </div>
-                    <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                        <img class="img-responsive rounded" src="img/blue_wave_of_water-wide.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <!-- /.container -->
-            </div
-            <div class="content-section-c">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5 col-sm-6">
-                            <hr class="section-heading-spacer">
-                            <div class="clearfix"></div>
-                            <h2 class="section-heading">Actualize Bootcamp Capstone Project</h2>
-                            <p class="lead">An ongoing effort to better catagorize the available Happy Hours around the Bay Area. <a target="_blank" href="http://jenordgaard.tech/">Five O'Clock Somewhere</a> was a fun project and my initial forray into Ruby on Rails, Angular.js, and jQuery.</p>
-                        </div>
-                        <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                            <img class="img-responsive rounded" src="img/bears.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
+    <style>
+        button.accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
 
-        <style>
-            button.accordion {
-                background-color: #eee;
-                color: #444;
-                cursor: pointer;
-                padding: 18px;
-                width: 100%;
-                border: none;
-                text-align: left;
-                outline: none;
-                font-size: 15px;
-                transition: 0.4s;
+        button.accordion.active, button.accordion:hover {
+            background-color: #ddd;
+        }
+
+        div.panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    </style>
+
+
+
+    <button class="accordion">1</button>
+    <div class="panel">
+        <script>
+            function positionLightboxImage() {
+                var top = ($(window).height() - $('#lightbox').height()) /2;
+                var left = ($(window).width() - $('#lightbox').width()) /2;
+                $('#lightbox')
+                .css({
+                    'top': top + $(document).scrollTop()
+                })
+                .fadeIn();
             }
-
-            button.accordion.active, button.accordion:hover {
-                background-color: #ddd;
+            function removeLightbox() {
+                $('#overlay, #lightbox')
+                .fadeOut('slow', function() {
+                    $(this).remove();
+                    $('body').css('overflow-y', 'auto');
+                })
             }
+            $('a.lightbox').click(function(e){
+                $('body').css('overflow-y', 'hidden');
+                $('<div id="overlay"></div>')
+                .css('top', $(docment).scrollTop())
+                .css('opacity', '0')
+                .animate({'opacity': '0.5'}, 'slow')
+                .appendTo('body');
+                $('<div id="lightbox"></div>')
+                .hide()
+                .appendTo('body');
+                $('img')
+                .attr('src', $(this).attr('href'))
+                .load(function(){
+                    positionLightboxImage();
+                })
+                .click(function(){
+                    removeLightbox();
+                })
+                .appendTo('#lightbox');
+                return false;
+            })
+        </script>
+        <p class="lead">Click on the image to see my <a target="_blank" href="https://nordgaard.github.io/img/Jens_Nordgaard_Resume_2017.jpg" class="lightbox">Resume</a> </p>
+        <a target="_blank" href="https://nordgaard.github.io/img/Jens_Nordgaard_Resume_2017.jpg" class="lightbox"><img class="img-responsive rounded" src="img/ability-to-smell-fear-cartoon-sm.png" alt=""></a>
+    </div>
+</div>
+<button class="accordion">2</button>
+<div class="panel">
+    <hr class="section-heading-spacer">
+    <div class="clearfix"></div>
+    <h2 class="section-heading">Check out my WordPress!</h2>
+    <p class="lead">I have been blogging on WordPress a while now and have played around with developing in the space as well, you can see some of my content through my WordPress page <a target="_blank" href="http://jenordgaard.tech/">here</a></p>
+    <img class="img-responsive rounded" src="img/blue_wave_of_water-wide.jpg" alt="">
+</div>
 
-            div.panel {
-                padding: 0 18px;
-                background-color: white;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.2s ease-out;
-            }
-        </style>
+<button class="accordion">3</button>
+<div class="panel">
+    <h2>Actualize Bootcamp Capstone Project</h2>
+    <p>An ongoing effort to better catagorize the available Happy Hours around the Bay Area. <a target="_blank" href="http://jenordgaard.tech/">Five O'Clock Somewhere</a> was a fun project and my initial forray into Ruby on Rails, Angular.js, and jQuery.</p>
+    <img class="img-responsive rounded" src="img/bears.jpg" alt="">
+</div>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
 
-
-
-        <button class="accordion">1</button>
-        <div class="panel">
-            <h2>Actualize Bootcamp Capstone Project</h2>
-            <p>An ongoing effort to better catagorize the available Happy Hours around the Bay Area. <a target="_blank" href="http://jenordgaard.tech/">Five O'Clock Somewhere</a> was a fun project and my initial forray into Ruby on Rails, Angular.js, and jQuery.</p>
-            <img class="img-responsive rounded" src="img/bears.jpg" alt="">
-        </div>
-
-        <button class="accordion">2</button>
-        <div class="panel">
-            <h2>Actualize Bootcamp Capstone Project</h2>
-            <p>An ongoing effort to better catagorize the available Happy Hours around the Bay Area. <a target="_blank" href="http://jenordgaard.tech/">Five O'Clock Somewhere</a> was a fun project and my initial forray into Ruby on Rails, Angular.js, and jQuery.</p>
-            <img class="img-responsive rounded" src="img/bears.jpg" alt="">
-        </div>
-
-        <button class="accordion">3</button>
-        <div class="panel">
-            <h2>Actualize Bootcamp Capstone Project</h2>
-            <p>An ongoing effort to better catagorize the available Happy Hours around the Bay Area. <a target="_blank" href="http://jenordgaard.tech/">Five O'Clock Somewhere</a> was a fun project and my initial forray into Ruby on Rails, Angular.js, and jQuery.</p>
-            <img class="img-responsive rounded" src="img/bears.jpg" alt="">
-        </div>
-      <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-          acc[i].onclick = function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight){
-              panel.style.maxHeight = null;
-          } else {
-              panel.style.maxHeight = panel.scrollHeight + "px";
-          } 
-      }
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+      } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
   }
+}
 </script>
 
 
