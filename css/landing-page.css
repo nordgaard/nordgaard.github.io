@@ -103,7 +103,7 @@ h6 {
             padding: 18px;
             width: 100%;
             border: none;
-            text-align: left;
+            text-align: center;
             outline: none;
             font-size: 15px;
             transition: 0.4s;
@@ -115,14 +115,14 @@ h6 {
 
         div.panel {
             padding: 0 18px;
-            background-color: white;
+            background-color: #0F9BDC;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.2s ease-out;
         }
 
         div.panel #accordion{
-    padding: 50px 0;
+    padding: 50px;
     background-color: #0F9BDC;
         color: white;
         }
@@ -146,7 +146,7 @@ h6 {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/DSC_0204_1.png) no-repeat center center;
+    background: url(../img/DSC_0097.jpg) no-repeat center center;
     background-size: cover;
 }
 .banner h2 {
