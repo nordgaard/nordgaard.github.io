@@ -42,8 +42,8 @@ h6 {
 }
 .accordian-content {
     position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .intro-message > h1 {
     margin: 0;
