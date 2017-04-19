@@ -18,7 +18,7 @@
 
 
     <script type="text/javascript" charset="utf-8">
-      $(window).load(function() {
+      $(window).on(function() {
         $('.flexslider').flexslider();
       });
     </script>
@@ -129,7 +129,7 @@
             .appendTo('body');
             $('img')
             .attr('src', $(this).attr('href'))
-            .load(function(){
+            .on(function(){
                 positionLightboxImage();
             })
             .click(function(){
@@ -163,7 +163,7 @@
 
                                             <script type="text/javascript">
                     $(document).ready(function() {
-                                $(window).load(function() {
+                                $(window).on(function() {
                                   // The slider being synced must be initialized first
                                   $('#carousel').flexslider({
                                     animation: "slide",
