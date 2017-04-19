@@ -16,9 +16,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" type="text/css" media="all" href="css/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" media="all" href="css/jgallery.min.css?v=1.6.1" />
-<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-<script type="text/javascript" src="js/jgallery.min.js?v=1.6.1"></script>
+    
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <!-- <script src="jquery.quovolver.js"></script> -->
@@ -155,83 +153,72 @@
         <h2>My Pictures</h2>
         <p>A gallery of some pictures I've taken.</p>
         <div class="accordian-content" id="photo-gallery">
-                <div id="gallery">
-                    <a href="images/large/1.jpg"><img src="img/trippy_vulture_on_post_1.jpeg" alt="Photo 1" /></a>
-                    <a href="images/large/1.jpg"><img src="img/trippy_vulture_on_post_1.jpeg" alt="Photo 1" /></a>
-                    <a href="images/large/1.jpg"><img src="img/trippy_vulture_on_post_1.jpeg" alt="Photo 1" /></a>
-                    <a href="images/large/1.jpg"><img src="img/trippy_vulture_on_post_1.jpeg" alt="Photo 1" /></a>
-                </div>
-                    <script type="text/javascript">
-                    $( function() {
-                        $( '#gallery' ).jGallery( { mode: 'slider' } );
-                    } );
-                    </script>
 
-<!--         <script type="text/javascript">
-            var GALLERY = {
-                container: "#gallery",
-                url: "getImages",
-                delay: 5000,
-                load: function() {
-                    var _gallery = this;
-                    $.ajax({
-                        type: "get",
-                        url: this.url,
-                success: function(data) {
-                            var images = data.split('|');
-                            $.each(images, function() {
-                                _gallery.display(this)
-                            })
-                        }
-                  })
-                },
-                display: function(image_url) {
-                    $('<img></img>')
-                    .attr('src', '/img/' + image_url)
-                    .hide()
-                    .load(function(){
-                        $(this).fadeIn();
-                    })
-                    .appendTo(this.container);
-                }
-            }
-        </script> -->
-<!--         <script type="text/javascript">
-            $(document).ready(function(){
-                GALLERY.load
-            })
-        </script> -->
-    </div> 
+            <script type="text/javascript">
+                (window).load(function() {
+                  $('.flexslider').flexslider({
+                    animation: "slide"
+                });
+            });</script>
+            <div class="flexslider">
+              <ul class="slides">
+                <li>
+                  <img src="img/trippy_vulture_on_post_1.jpeg" />
+                  <p class="flex-caption">Adventurer Cheesecake Brownie</p>
+              </li>
+              <li>
+                  <img src="img/trippy_vulture_on_post_1.jpeg" />
+                  <p class="flex-caption">Adventurer Cheesecake Brownie</p>
+              </li>
+              <li>
+                  <img src="img/trippy_vulture_on_post_1.jpeg" />
+                  <p class="flex-caption">Adventurer Cheesecake Brownie</p>
+              </li>
+              <li>
+                  <img src="img/trippy_vulture_on_post_1.jpeg" />
+                  <p class="flex-caption">Adventurer Cheesecake Brownie</p>
+              </li>
+              <li>
+                  <img src="img/trippy_vulture_on_post_1.jpeg" />
+                  <p class="flex-caption">Adventurer Cheesecake Brownie</p>
+              </li>
+          </ul>
+
+      </div>
+
+  </div>
+
+</div> 
+</div>
+
+
+
+
+<button class="accordion">Feature Project</button>
+<div class="panel" id="accordion">
+    <h2>Actualize Bootcamp Capstone Project</h2>
+    <p>An ongoing effort to better catagorize the available Happy Hours around the Bay Area. <a target="_blank" href="http://jenordgaard.tech/">Five O'Clock Somewhere</a> was a fun project and my initial forray into Ruby on Rails, Angular.js, and jQuery.</p>
+    <div class="accordian-content">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9t86-HWM8DE" frameborder="0" allowfullscreen></iframe>
     </div>
 
+</div> 
 
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
 
-
-        <button class="accordion">Feature Project</button>
-    <div class="panel" id="accordion">
-        <h2>Actualize Bootcamp Capstone Project</h2>
-        <p>An ongoing effort to better catagorize the available Happy Hours around the Bay Area. <a target="_blank" href="http://jenordgaard.tech/">Five O'Clock Somewhere</a> was a fun project and my initial forray into Ruby on Rails, Angular.js, and jQuery.</p>
-        <div class="accordian-content">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/9t86-HWM8DE" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-    </div> 
-
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-          acc[i].onclick = function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight){
-              panel.style.maxHeight = null;
-          } else {
-              panel.style.maxHeight = panel.scrollHeight + "px";
-          } 
-      }
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+      } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
   }
+}
 </script>
 
 
