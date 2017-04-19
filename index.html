@@ -15,6 +15,10 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" media="all" href="css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/jgallery.min.css?v=1.6.1" />
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/jgallery.min.js?v=1.6.1"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <!-- <script src="jquery.quovolver.js"></script> -->
@@ -70,7 +74,7 @@
                 <div class="col-lg-12">
                     <div class="intro-message" title="One of my passions is photography, this backgound is a picture of mine from Baja Sur, Mexico!">
                         <h1>Jens Nordgaard</h1>
-                        <h3>Web Developer <br>Hard Worker<br>Thinker<br>A Real Good Time</h3>
+                        <h3>Web Developer <br>Hard Worker<br>A Real Good Time</h3>
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
@@ -150,35 +154,19 @@
         <h2>My Pictures</h2>
         <p>A gallery of some pictures I've taken.</p>
         <div class="accordian-content" id="photo-gallery">
-            <div id="gallery-demo" class="simplegallery">
-  <div class="content">
-    <img src="images/bigs/1.jpg">
-    <img src="images/bigs/2.jpg">
-    <img src="images/bigs/3.jpg">
-  </div>
-  <div class="clear"></div>
-  <div class="thumbnail">
-    <div class="thumb"> <a href="#" rel="1"> <img src="images/thumbs/1.jpg"> </a> </div>
-    <div class="thumb"> <a href="#" rel="2"> <img src="images/thumbs/2.jpg"> </a> </div>
-    <div class="thumb"> <a href="#" rel="3"> <img src="images/thumbs/3.jpg"> </a> </div>
-  </div>
+        
+<div id="gallery">
+    <a href="images/large/1.jpg"><img src="images/thumbs/1.jpg" alt="Photo 1" /></a>
+    <a href="images/large/2.jpg"><img src="images/thumbs/2.jpg" alt="Photo 2" /></a>
+    <a href="images/large/3.jpg"><img src="images/thumbs/3.jpg" alt="Photo 3" /></a>
 </div>
-        </div>
-        <script type="text/javascript">
-            
-$(document).ready(function(){
 
-$('#gallery-demo').simplegallery({
-  galltime : 400, // transition delay
-  gallcontent: '.content',
-  gallthumbnail: '.thumbnail',
-  gallthumb: '.thumb'
-});
+<script type="text/javascript">
+$( function() {
+    $( '#gallery' ).jGallery( { mode: 'slider' } );
+} );
+</script>
 
-});
-
-            
-        </script>
         <script type="text/javascript">
             var GALLERY = {
                 container: "#gallery",
