@@ -46,95 +46,95 @@
     <script type="text/javascript">
         $(document).ready(function() {
          //Put your code here
-            });     
-    </script>
-    <script type="text/javascript">
-        $( function() {
-            $( document ).tooltip();
-        } );
-    </script>
-    <style>
-      label {
-        display: inline-block;
-        width: auto;
-        font-size: 100px;
-        align-items: center;
-    </style>
-    <a name="about"></a>
-    <div class="intro-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message" title="One of my passions is photography, this backgound is a picture of mine from Baja Sur, Mexico!">
-                        <h1>Jens Nordgaard</h1>
-                        <h3>Web Developer <br>Hard Worker<br>A Real Good Time</h3>
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="https://www.linkedin.com/in/jenordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/nordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                            </li>
-                            <li>
-                                <a href="mailto:jenordgaard@gmail.com?subject=About your exceptional website..." class="btn btn-default btn-lg" target="_blank"><i class="fa fa-google fa-fw"></i> <span class="network-name">Email</span></a>
-                            </li>
-                        </ul>
-                    </div>
+     });     
+ </script>
+ <script type="text/javascript">
+    $( function() {
+        $( document ).tooltip();
+    } );
+</script>
+<style>
+  label {
+    display: inline-block;
+    width: auto;
+    font-size: 100px;
+    align-items: center;
+</style>
+<a name="about"></a>
+<div class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message" title="One of my passions is photography, this backgound is a picture of mine from Baja Sur, Mexico!">
+                    <h1>Jens Nordgaard</h1>
+                    <h3>Web Developer <br>Hard Worker<br>A Real Good Time</h3>
+                    <hr class="intro-divider">
+                    <ul class="list-inline intro-social-buttons">
+                        <li>
+                            <a href="https://www.linkedin.com/in/jenordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/nordgaard" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        </li>
+                        <li>
+                            <a href="mailto:jenordgaard@gmail.com?subject=About your exceptional website..." class="btn btn-default btn-lg" target="_blank"><i class="fa fa-google fa-fw"></i> <span class="network-name">Email</span></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Intro Banner -->
-    <!-- Start Content Divs-->
-    <button class="accordion">Hello, Employers!</button>
-    <div class="panel" id="accordion">
-        <script>
-            function positionLightboxImage() {
-                var top = ($(window).height() - $('#lightbox').height()) /2;
-                var left = ($(window).width() - $('#lightbox').width()) /2;
-                $('#lightbox')
-                .css({
-                    'top': top + $(document).scrollTop()
-                })
-                .fadeIn();
-            }
-            function removeLightbox() {
-                $('#overlay, #lightbox')
-                .fadeOut('slow', function() {
-                    $(this).remove();
-                    $('body').css('overflow-y', 'auto');
-                })
-            }
-            $('a.lightbox').click(function(e){
-                $('body').css('overflow-y', 'hidden');
-                $('<div id="overlay"></div>')
-                .css('top', $(docment).scrollTop())
-                .css('opacity', '0')
-                .animate({'opacity': '0.5'}, 'slow')
-                .appendTo('body');
-                $('<div id="lightbox"></div>')
-                .hide()
-                .appendTo('body');
-                $('img')
-                .attr('src', $(this).attr('href'))
-                .load(function(){
-                    positionLightboxImage();
-                })
-                .click(function(){
-                    removeLightbox();
-                })
-                .appendTo('#lightbox');
-                return false;
+</div>
+<!-- End Intro Banner -->
+<!-- Start Content Divs-->
+<button class="accordion">Hello, Employers!</button>
+<div class="panel" id="accordion">
+    <script>
+        function positionLightboxImage() {
+            var top = ($(window).height() - $('#lightbox').height()) /2;
+            var left = ($(window).width() - $('#lightbox').width()) /2;
+            $('#lightbox')
+            .css({
+                'top': top + $(document).scrollTop()
             })
-        </script>
-        <h2>Experience</h2>
-        <p class="lead">Click on the image to see my <a target="_blank" href="https://nordgaard.github.io/img/Jens_Nordgaard_Resume_2017.jpg" class="lightbox">Resume</a> </p>
-        <div class="accordian-content">
+            .fadeIn();
+        }
+        function removeLightbox() {
+            $('#overlay, #lightbox')
+            .fadeOut('slow', function() {
+                $(this).remove();
+                $('body').css('overflow-y', 'auto');
+            })
+        }
+        $('a.lightbox').click(function(e){
+            $('body').css('overflow-y', 'hidden');
+            $('<div id="overlay"></div>')
+            .css('top', $(docment).scrollTop())
+            .css('opacity', '0')
+            .animate({'opacity': '0.5'}, 'slow')
+            .appendTo('body');
+            $('<div id="lightbox"></div>')
+            .hide()
+            .appendTo('body');
+            $('img')
+            .attr('src', $(this).attr('href'))
+            .load(function(){
+                positionLightboxImage();
+            })
+            .click(function(){
+                removeLightbox();
+            })
+            .appendTo('#lightbox');
+            return false;
+        })
+    </script>
+    <h2>Experience</h2>
+    <p class="lead">Click on the image to see my <a target="_blank" href="https://nordgaard.github.io/img/Jens_Nordgaard_Resume_2017.jpg" class="lightbox">Resume</a> </p>
+    <div class="accordian-content">
 
-            <a target="_blank" href="https://nordgaard.github.io/img/Jens_Nordgaard_Resume_2017.jpg" class="lightbox"><img class="img-responsive rounded" src="img/ability-to-smell-fear-cartoon-sm.png" alt=""></a>
-        </div>
+        <a target="_blank" href="https://nordgaard.github.io/img/Jens_Nordgaard_Resume_2017.jpg" class="lightbox"><img class="img-responsive rounded" src="img/ability-to-smell-fear-cartoon-sm.png" alt=""></a>
     </div>
+</div>
 <!--     <button class="accordion">WordPress</button>
     <div class="panel" id="accordion">
         <h2 class="section-heading">Check out my WordPress!</h2>
@@ -149,39 +149,63 @@
         <p>A gallery of some pictures I've taken.</p>
         <div class="accordian-content" id="photo-gallery">
 
-            <script type="text/javascript">
-                  $('.flexslider').flexslider({
-                    animation: "slide"
-                });
-                </script>
-            <div class="flexslider">
-              <ul class="slides">
-                <li>
-                  <img src="img/trippy_vulture_on_post_1.jpeg" />
-                  <p class="flex-caption">Adventurer Cheesecake Brownie</p>
-              </li>
-              <li>
-                  <img src="img/trippy_vulture_on_post_1.jpeg" />
-                  <p class="flex-caption">Adventurer Cheesecake Brownie</p>
-              </li>
-              <li>
-                  <img src="img/trippy_vulture_on_post_1.jpeg" />
-                  <p class="flex-caption">Adventurer Cheesecake Brownie</p>
-              </li>
-              <li>
-                  <img src="img/trippy_vulture_on_post_1.jpeg" />
-                  <p class="flex-caption">Adventurer Cheesecake Brownie</p>
-              </li>
-              <li>
-                  <img src="img/trippy_vulture_on_post_1.jpeg" />
-                  <p class="flex-caption">Adventurer Cheesecake Brownie</p>
-              </li>
-          </ul>
 
-      </div>
+                                            <script type="text/javascript">
+                                                $(window).load(function() {
+                                  // The slider being synced must be initialized first
+                                  $('#carousel').flexslider({
+                                    animation: "slide",
+                                    controlNav: false,
+                                    animationLoop: false,
+                                    slideshow: false,
+                                    itemWidth: 210,
+                                    itemMargin: 5,
+                                    asNavFor: '#slider'
+                                });
 
-  </div>
-
+                                  $('#slider').flexslider({
+                                    animation: "slide",
+                                    controlNav: false,
+                                    animationLoop: false,
+                                    slideshow: false,
+                                    sync: "#carousel"
+                                });
+                                });
+                                </script>
+                                <div id="slider" class="flexslider">
+                                  <ul class="slides">
+                                    <li>
+                                      <img src="slide1.jpg" />
+                                  </li>
+                                  <li>
+                                      <img src="slide2.jpg" />
+                                  </li>
+                                  <li>
+                                      <img src="slide3.jpg" />
+                                  </li>
+                                  <li>
+                                      <img src="slide4.jpg" />
+                                  </li>
+                                  <!-- items mirrored twice, total of 12 -->
+                                </ul>
+                                </div>
+                                <div id="carousel" class="flexslider">
+                                  <ul class="slides">
+                                    <li>
+                                      <img src="slide1.jpg" />
+                                  </li>
+                                  <li>
+                                      <img src="slide2.jpg" />
+                                  </li>
+                                  <li>
+                                      <img src="slide3.jpg" />
+                                  </li>
+                                  <li>
+                                      <img src="slide4.jpg" />
+                                  </li>
+                                  <!-- items mirrored twice, total of 12 -->
+                                </ul>
+                                </div>                            
 </div> 
 </div>
 
@@ -193,7 +217,7 @@
     <h2>Actualize Bootcamp Capstone Project</h2>
     <p>An ongoing effort to better catagorize the available Happy Hours around the Bay Area. <a target="_blank" href="http://jenordgaard.tech/">Five O'Clock Somewhere</a> was a fun project and my initial forray into Ruby on Rails, Angular.js, and jQuery.</p>
     <div class="accordian-content">
-    <iframe width="1000" height="563" src="https://www.youtube.com/embed/9t86-HWM8DE" frameborder="0" allowfullscreen></iframe>
+        <iframe width="1000" height="563" src="https://www.youtube.com/embed/9t86-HWM8DE" frameborder="0" allowfullscreen></iframe>
     </div>
 
 </div> 
@@ -253,7 +277,6 @@
                 </ul>
                 <p class="copyright text-muted small">Content Copyright &copy; Jens Erik Nordgaard 2017. All Rights Reserved</p>
             </div>
-            <script type="text/javascript" src="//widget.coindesk.com/bpiticker/coindesk-widget.min.js"></script>
         </div>
     </div>
 </footer>
