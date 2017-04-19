@@ -154,20 +154,19 @@
         <h2>My Pictures</h2>
         <p>A gallery of some pictures I've taken.</p>
         <div class="accordian-content" id="photo-gallery">
-        
-<div id="gallery">
-    <a href="images/large/1.jpg"><img src="images/thumbs/1.jpg" alt="Photo 1" /></a>
-    <a href="images/large/2.jpg"><img src="images/thumbs/2.jpg" alt="Photo 2" /></a>
-    <a href="images/large/3.jpg"><img src="images/thumbs/3.jpg" alt="Photo 3" /></a>
-</div>
+                <div id="gallery">
+                    <a href="images/large/1.jpg"><img src="img/trippy_vulture_on_post_1.jpeg" alt="Photo 1" /></a>
+                    <a href="images/large/1.jpg"><img src="img/trippy_vulture_on_post_1.jpeg" alt="Photo 1" /></a>
+                    <a href="images/large/1.jpg"><img src="img/trippy_vulture_on_post_1.jpeg" alt="Photo 1" /></a>
+                    <a href="images/large/1.jpg"><img src="img/trippy_vulture_on_post_1.jpeg" alt="Photo 1" /></a>
+                </div>
+                    <script type="text/javascript">
+                    $( function() {
+                        $( '#gallery' ).jGallery( { mode: 'slider' } );
+                    } );
+                    </script>
 
-<script type="text/javascript">
-$( function() {
-    $( '#gallery' ).jGallery( { mode: 'slider' } );
-} );
-</script>
-
-        <script type="text/javascript">
+<!--         <script type="text/javascript">
             var GALLERY = {
                 container: "#gallery",
                 url: "getImages",
@@ -195,16 +194,17 @@ $( function() {
                     .appendTo(this.container);
                 }
             }
-        </script>
-        <script type="text/javascript">
+        </script> -->
+<!--         <script type="text/javascript">
             $(document).ready(function(){
                 GALLERY.load
             })
-        </script>
-
-
-
+        </script> -->
     </div> 
+
+
+
+
         <button class="accordion">Feature Project</button>
     <div class="panel" id="accordion">
         <h2>Actualize Bootcamp Capstone Project</h2>
