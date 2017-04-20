@@ -152,14 +152,147 @@
         <div class="accordian-content">
 
 
-                                            <script type="text/javascript">
-                    $(document).ready(function() {
-                                $(window).on(function() {
 
-                                      $('.flexslider').flexslider({
-                                        animation: "slide"
-                                      });
-                                  // The slider being synced must be initialized first
+
+
+<style type="text/css">
+#popup
+{
+width:600px;
+border-radius:10px;
+display:none;
+height:600px;
+z-index:1001;
+position:fixed;
+margin-top:-300px;
+margin-left:-300px;
+left:50%;
+top:50%;
+background:#FFFFFF;
+}
+.pics
+{
+float:left;
+display:none;
+position:relative;
+height:600px;
+width:600px;
+}
+#black_overlay
+{
+position:fixed;top:0%;left: 0%;width: 100%;height:100%; display:none;background-color: black;z-index:1000;-moz-opacity: .9;opacity:.9;filter: alpha(opacity=90);
+}
+.next, .prev {
+position:absolute;
+top:45%;
+left:0%;
+width:24px;
+height:43px;
+display:block;
+z-index:1004;
+}
+.next {
+left:96%;
+}
+</style>
+<div id="popup">
+
+<div id="pic1" class="pics">
+<img src='<img1-source>'  height="600" width="600"/>
+</div>
+
+<div id="pic2" class="pics">
+<img src='<img2-source>'  height="600" width="600"/>
+</div>
+
+<div id="pic3" class="pics">
+<img src='<img3-source>'  height="600" width="600"/>
+</div>
+
+<div id="pic4" class="pics">
+<img src='<img4-source>'  height="600" width="600"/>
+</div>
+
+<a href="javascript:void(null)" class="prev"><img src="images/arrow-prev.png" width="24" height="43" alt="Arrow Prev" onClick="clearTimeout(t);previous();"></a>
+
+<a href="javascript:void(null)" class="next"><img src="images/arrow-next.png" width="24" height="43" alt="Arrow Next" onClick="clearTimeout(t);next();"></a>
+
+</div>
+
+<div id="black_overlay" onclick="stopgallery()"></div>
+
+
+<script type="text/javascript">
+a=0;
+function time()
+{
+ t=setTimeout("next()", 5000); //set time interval between gallery pics
+}
+
+function next()
+ {
+ if(a==4)
+ a=1;
+ else
+ a++;
+ document.getElementById('pic'+a).style.display="block";
+ for(k=1;k<=4;k++)
+ {
+ if(k==a)
+ continue;
+ document.getElementById('pic'+k).style.display="none";
+ }
+ time();
+ }
+ function previous()
+ {
+
+ if(a==1)
+ {
+ a=4;
+ document.getElementById("pic"+a).style.display="block";
+ }
+ else
+ document.getElementById('pic' + --a).style.display="block";
+ for(m=1;m<=4;m++)
+ {
+ if(m==a)
+ continue;
+ document.getElementById('pic'+m).style.display="none";
+ }
+ time();
+ }
+
+function showgallery()
+{
+document.getElementById('popup').style.display='block';
+document.getElementById('black_overlay').style.display='block';
+next();
+}
+
+function stopgallery()
+{
+document.getElementById('popup').style.display='none';
+document.getElementById('black_overlay').style.display='none';</pre>
+clearTimeout(t);
+a=0;
+}
+</script>
+
+
+<a href="javascript:void(null)" onclick="showgallery()">Start Gallery</a>
+
+
+
+
+                                            <script type="text/javascript">
+                    // $(document).ready(function() {
+                    //             $(window).on(function() {
+                                    // #1
+                                      // $('.flexslider').flexslider({
+                                      //   animation: "slide"
+                                      // });
+                                  // #2 The slider being synced must be initialized first
                                 //   $('#carousel').flexslider({
                                 //     animation: "slide",
                                 //     controlNav: false,
@@ -177,10 +310,10 @@
                                 //     slideshow: false,
                                 //     sync: "#carousel"
                                 // });
-                                });
-                                });  
+                                // });
+                                // });  
                                 </script>
-                                <div id="slider" class="flexslider">
+<!--                                 <div id="slider" class="flexslider">
                                   <ul class="slides">
                                     <li>
                                       <img src="img/trippy_hw_2.jpeg" />
@@ -189,7 +322,7 @@
                                       <img src="img/trippy_hw_2.jpeg" />
                                   </li>
                                   <!-- items mirrored twice, total of 12 -->
-                                </ul>
+<!--                                 </ul>
                                 </div>
                                 <div id="carousel" class="flexslider">
                                   <ul class="slides">
@@ -198,10 +331,10 @@
                                   </li>
                                     <li>
                                       <img src="img/trippy_hw_2.jpeg" />
-                                  </li>
+                                  </li> -->
                                   <!-- items mirrored twice, total of 12 -->
-                                </ul>
-                                </div>                            
+                                <!-- </ul> -->
+                                <!-- </div>   -->                           
 </div> 
 </div>
 
