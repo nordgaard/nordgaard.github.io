@@ -44,8 +44,47 @@ h6 {
     position: relative;
     padding-top: 20px;
     padding-bottom: 20px;
+} 
+
+#popup {
+width:600px;
+border-radius:10px;
+display:none;
+height:600px;
+z-index:1001;
+position:fixed;
+margin-top:-300px;
+margin-left:-300px;
+left:50%;
+top:50%;
+background:#FFFFFF;
 }
 
+.pics {
+float:left;
+display:none;
+position:relative;
+height:600px;
+width:600px;
+}
+
+#black_overlay {
+position:fixed;top:0%;left: 0%;width: 100%;height:100%; display:none;background-color: black;z-index:1000;-moz-opacity: .9;opacity:.9;filter: alpha(opacity=90);
+}
+
+.next, .prev {
+position:absolute;
+top:45%;
+left:0%;
+width:24px;
+height:43px;
+display:block;
+z-index:1004;
+}
+
+.next {
+left:96%;
+}
 .flex-caption {
   width: 96%;
   padding: 2%;
