@@ -150,106 +150,22 @@
         <h2>My Pictures</h2>
         <p>A gallery of some pictures I've taken.</p>
         <div class="accordian-content">
-
-<div id="popup">
-
-<div class="pics">
-    <img src="img/trippy_vulture_closeup.jpeg"  height="600" width="600"/>
+<div id="gallery">
+  <ul id="navigation">
+    <li><a href="#pic1"><img alt="" src="small_nature1.jpg" /></a></li>
+    <li><a href="#pic2"><img alt="" src="small_nature2.jpg" /></a></li>
+    <li><a href="#pic3"><img alt="" src="small_nature3.jpg" /></a></li>
+    <li><a href="#pic4"><img alt="" src="small_nature4.jpg" /></a></li>
+    <li><a href="#pic5"><img alt="" src="small_nature5.jpg" /></a></li>
+  </ul>
+  <div id="full-picture">
+    <div><a name="pic1"></a><img alt="" src="large_nature1.jpg" /></div>
+    <div><a name="pic2"></a><img alt="" src="large_nature2.jpg" /></div>
+    <div><a name="pic3"></a><img alt="" src="large_nature3.jpg" /></div>
+    <div><a name="pic4"></a><img alt="" src="large_nature4.jpg" /></div>
+    <div><a name="pic5"></a><img alt="" src="large_nature5.jpg" /></div>
+  </div>
 </div>
-<div class="pics">
-    <img src="img/wtf_sky.jpeg"  height="600" width="600"/>
-</div>
-<div class="pics">
-    <img src="img/threshold_dove.jpeg"  height="600" width="600"/>
-</div>
-<div class="pics">
-    <img src="img/longboard_wave_trippy.jpeg"  height="600" width="600"/>
-</div>
-<div class="pics">
-    <img src="img/just_trippy_wave.jpeg"  height="600" width="600"/>
-</div>
-<div class="pics">
-    <img src="img/flyby_cormorant_crop.jpeg"  height="600" width="600"/>
-</div>
-<div class="pics">
-    <img src="img/trippy_vulture_on_post_1.jpeg"  height="600" width="600"/>
-</div>
-<div class="pics">
-    <img src="img/DSC_0227.JPG"  height="600" width="600"/>
-</div>
-<div class="pics">
-    <img src="img/mountain_hw_crop_sharp.jpeg"  height="600" width="600"/>
-</div>
-
-<a href="javascript:void(null)" class="prev"><img src="images/arrow-prev.png" width="24" height="43" alt="Arrow Prev" onClick="clearTimeout(t);previous();"></a>
-
-<a href="javascript:void(null)" class="next"><img src="images/arrow-next.png" width="24" height="43" alt="Arrow Next" onClick="clearTimeout(t);next();"></a>
-
-</div>
-
-<div id="black_overlay" onclick="stopgallery()"></div>
-
-
-<script type="text/javascript">
-a=0;
-function time()
-{
- t=setTimeout("next()", 5000); //set time interval between gallery pics
-}
-
-function next()
- {
- if(a==4)
- a=1;
- else
- a++;
- document.getElementById('pic'+a).style.display="block";
- for(k=1;k<=4;k++)
- {
- if(k==a)
- continue;
- document.getElementById('pic'+k).style.display="none";
- }
- time();
- }
- function previous()
- {
-
- if(a==1)
- {
- a=4;
- document.getElementById("pic"+a).style.display="block";
- }
- else
- document.getElementById('pic' + --a).style.display="block";
- for(m=1;m<=4;m++)
- {
- if(m==a)
- continue;
- document.getElementById('pic'+m).style.display="none";
- }
- time();
- }
-
-function showgallery()
-{
-document.getElementById('popup').style.display='block';
-document.getElementById('black_overlay').style.display='block';
-next();
-}
-
-function stopgallery()
-{
-document.getElementById('popup').style.display='none';
-document.getElementById('black_overlay').style.display='none';
-clearTimeout(t);
-a=0;
-}
-</script>
-
-
-<a href="javascript:void(null)" onclick="showgallery()">Start Gallery</a>
-</div> 
 </div>
 
 
