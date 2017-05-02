@@ -27,11 +27,7 @@ section,
 summary {
     display: block;
     background-color: #555555;
-}
-section #about {
-    display: block;
-    background-color: #555555;
-    padding: 20px;
+    font: white;
 }
 audio,
 canvas,
@@ -1098,17 +1094,8 @@ select,
 textarea {
     font-family: inherit;
     font-size: inherit;
-    line-height: inherit;
-    color: black;
+    line-height: inherit
 }
-button .send-message {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    color: black;
-    margin: 20px;
-}
-
 a {
     color: #99d68f;
     text-decoration: none
@@ -1334,7 +1321,8 @@ mark {
 }
 .text-center {
     text-align: center;
-    padding: 20px;
+    padding-bottom: 20px;
+    color: black;
 }
 .text-justify {
     text-align: justify
@@ -5557,7 +5545,6 @@ button.list-group-item-danger.active:hover {
     line-height: 1.3
 }
 .panel {
-    /*margin-bottom: 20px;*/
     background-color: #fff;
     border: 1px solid transparent;
     border-radius: 4px;
