@@ -27,7 +27,7 @@ section,
 summary {
     display: block;
     background-color: #555555;
-    font: white;
+    padding: 20px;    
 }
 audio,
 canvas,
@@ -1094,8 +1094,17 @@ select,
 textarea {
     font-family: inherit;
     font-size: inherit;
-    line-height: inherit
+    line-height: inherit;
+    color: black;
 }
+button .send-message {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: black;
+    margin: 20px;
+}
+
 a {
     color: #99d68f;
     text-decoration: none
@@ -5543,7 +5552,7 @@ button.list-group-item-danger.active:hover {
     line-height: 1.3
 }
 .panel {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     background-color: #fff;
     border: 1px solid transparent;
     border-radius: 4px;

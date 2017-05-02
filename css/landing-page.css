@@ -17,6 +17,7 @@ h5,
 h6 {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+    color: whitesmoke;
 }
 .topnav {
     font-size: 14px; 
@@ -198,7 +199,7 @@ left:96%;
 }
 
         button.accordion {
-            background-color: #464646;
+            background-color: #333333;
             color: white;
             cursor: pointer;
             padding: 18px;
@@ -216,7 +217,7 @@ left:96%;
 
         div.panel {
             padding: 0 18px;
-            background-color: #0F9BDC;
+            background-color: #6E7F80;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.2s ease-out;
