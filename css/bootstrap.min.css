@@ -27,7 +27,11 @@ section,
 summary {
     display: block;
     background-color: #555555;
-    padding: 20px;    
+}
+section #about {
+    display: block;
+    background-color: #555555;
+    padding: 20px;
 }
 audio,
 canvas,
@@ -1329,7 +1333,8 @@ mark {
     text-align: right
 }
 .text-center {
-    text-align: center
+    text-align: center;
+    padding: 20px;
 }
 .text-justify {
     text-align: justify
