@@ -25,7 +25,9 @@ menu,
 nav,
 section,
 summary {
-    display: block
+    display: block;
+    background-color: #555555;
+    font: white;
 }
 audio,
 canvas,
@@ -84,8 +86,10 @@ sub {
     bottom: -.25em
 }
 img {
-    border: 0
+    border: 0;
+    padding:  20px;
 }
+
 svg:not(:root) {
     overflow: hidden
 }
@@ -1113,6 +1117,7 @@ img {
         margin: auto;
     width: 40%
 }
+
 .carousel-inner>.item>a>img,
 .carousel-inner>.item>img,
 .img-responsive,

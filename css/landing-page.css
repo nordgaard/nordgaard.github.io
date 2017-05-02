@@ -32,7 +32,7 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/trippy_hw_2.jpeg) no-repeat center center;
+    background: url(../img/trippy_hw.jpeg) no-repeat center center;
     background-size: cover;
 }
 .intro-message {
@@ -198,8 +198,8 @@ left:96%;
 }
 
         button.accordion {
-            background-color: #eee;
-            color: #444;
+            background-color: #464646;
+            color: white;
             cursor: pointer;
             padding: 18px;
             width: 100%;
@@ -248,7 +248,7 @@ left:96%;
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/pattern_texture1785.jpg) no-repeat center center;
+    background: url(../img/purple_wave.jpeg) no-repeat center center;
     background-size: cover;
 }
 .banner h2 {
